@@ -1,0 +1,396 @@
+﻿<html lang="ko">
+<link rel="icon" type="image/png" href="image_res/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="image_res/favicon-16x16.png" sizes="16x16" />
+
+<head>
+    <meta charset="UTF-8" />
+    <title>포켓몬 데미지 계산기</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="script_res/select2.css" />
+    <link type="text/css" rel="stylesheet" href="script_res/ap_calc.css" />
+    <link type="text/css" rel="stylesheet" href="script_res/nb_calc.css" />
+</head>
+<body>
+    <div class="header"><div class="wrapper">
+            <span class="nav"><a href="https://lilymaniac.github.io/calc/">한국어 계산기 (이 페이지)</a> | <a href="https://jake-white.github.io/VGC-Damage-Calculator/">영어 계산기</a> | <a href="https://github.com/lilymaniac/calc">한국어 GitHub</a> | <a href="https://github.com/jake-white/VGC-2016-Damage-Calculator">영어 Github</a> | <a href="https://docs.google.com/spreadsheets/d/1-z-OdB2fUe39-2y9D9xue7VSJo2v8Z36sMRVCfww2lk/">2017 스피드 티어</a></span>
+            <div style="clear:both"></div>
+
+    </div></div>
+    <div class="wrapper">
+        <div>
+            <span class="title-text">포켓몬 데미지 계산기</span>
+            <span title="세대를 선택하세요.">
+                <input class="gen btn-input" type="radio" name="gen" value="1" id="gen1" /><label class="btn btn-small btn-left" for="gen1">1세대</label>
+                <input class="gen btn-input" type="radio" name="gen" value="2" id="gen2" /><label class="btn btn-small btn-mid" for="gen2">2세대</label>
+                <input class="gen btn-input" type="radio" name="gen" value="3" id="gen3" /><label class="btn btn-small btn-mid" for="gen3">3세대</label>
+                <input class="gen btn-input" type="radio" name="gen" value="4" id="gen4" /><label class="btn btn-small btn-mid" for="gen4">4세대</label>
+                <input class="gen btn-input" type="radio" name="gen" value="5" id="gen5" /><label class="btn btn-small btn-mid" for="gen5">5세대</label>
+                <input class="gen btn-input" type="radio" name="gen" value="6" id="gen6" /><label class="btn btn-small btn-mid" for="gen6">6세대</label>
+                <input class="gen btn-input" type="radio" name="gen" value="7" id="gen7" checked="checked" /><label class="btn btn-small btn-right" for="gen7">7세대</label>
+            </span>
+        </div>
+        <hr />
+        <div class="move-result-group" title="자세한 결과를 보려면 기술을 선택하세요.">
+            <div class="move-result-subgroup">
+                <div class="result-move-header"><span id="resultHeaderL">포켓몬 1의 기술 (자세한 결과를 보려면 기술을 선택하세요)</span></div>
+                <div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveL1" checked="checked" /><label class="btn btn-xxxwide btn-top" for="resultMoveL1">무릎차기</label> <span id="resultDamageL1">??? - ???%</span></div>
+                <div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveL2" /><label class="btn btn-xxxwide btn-mid" for="resultMoveL2">팔콘 펀치</label> <span id="resultDamageL2">??? - ???%</span></div>
+                <div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveL3" /><label class="btn btn-xxxwide btn-mid" for="resultMoveL3">수상한 냄새</label> <span id="resultDamageL3">??? - ???%</span></div>
+                <div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveL4" /><label class="btn btn-xxxwide btn-bottom" for="resultMoveL4">무덤파기</label> <span id="resultDamageL4">??? - ???%</span></div>
+            </div>
+            <div class="move-result-subgroup">
+                <div class="result-move-header"><span id="resultHeaderR">포켓몬 2의 기술 (자세한 결과를 보려면 기술을 선택하세요)</span></div>
+                <div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveR1" /><label class="btn btn-xxxwide btn-top" for="resultMoveR1">무릎차기</label> <span id="resultDamageR1">??? - ???%</span></div>
+                <div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveR2" /><label class="btn btn-xxxwide btn-mid" for="resultMoveR2">팔콘 펀치</label> <span id="resultDamageR2">??? - ???%</span></div>
+                <div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveR3" /><label class="btn btn-xxxwide btn-mid" for="resultMoveR3">수상한 냄새</label> <span id="resultDamageR3">??? - ???%</span></div>
+                <div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveR4" /><label class="btn btn-xxxwide btn-bottom" for="resultMoveR4">무덤파기</label> <span id="resultDamageR4">??? - ???%</span></div>
+            </div>
+        </div>
+        <div class="main-result-group">
+            <div class="big-text"><span id="mainResult">로딩 중...</span></div>
+            <div class="small-text"><span id="damageValues">(이 메시지가 계속 보인다면 자바스크립트를 켜 보세요. 그래도 고쳐지지 않는 경우 데미지 계산기를 수정하는 중일 수 있으므로 나중에 다시 접속하세요.)</span></div>
+        </div>
+        
+        <div class="panel poke-info" id="p1">
+            <div class="panel-heading"><h4 class="panel-title">포켓몬 1</h4></div>
+            <div class="panel-body">
+                <input type="text" class="set-selector calc-trigger" />
+                <div class="info-group">
+                    <div>
+                        <label>타입</label>
+                        <select class="type1 terrain-trigger calc-trigger"></select>
+                        <select class="type2 terrain-trigger calc-trigger"></select>
+                    </div>
+                    <div class="hide">
+                        <label>폼</label>
+                        <select class="forme calc-trigger"></select>
+                    </div>
+                    <div>
+                        <label>레벨</label>
+                        <input class="level calc-trigger" value="100" />
+                    </div>
+                    <div class="hide">
+                        <label>몸무게 (kg)</label>
+                        <input class="weight calc-trigger" value="10.0" />
+                    </div>
+                </div>
+                <div class="info-group">
+                    <table>
+                        <tr><th></th><th>종족값</th><th class="gen-specific g3 g4 g5 g6 g7 g7">개체값</th><th class="gen-specific g3 g4 g5 g6 g7 g7">노력치</th><th class="gen-specific g1 g2 hide">DVs</th><th></th><th></th></tr>
+                        <tr class="hp"><td><label>[H] HP</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" disabled="disabled" /></td><td><span class="total">341</span></td><td></td></tr>
+                        <tr class="at"><td><label>[A] 공격</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr class="df"><td><label>[B] 방어</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr class="sa gen-specific g2 g3 g4 g5 g6 g7"><td><label>[C] 특공</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr class="sd gen-specific g2 g3 g4 g5 g6 g7"><td><label>[D] 특방</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" disabled="disabled" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr class="sl gen-specific g1 hide"><td><label>특수</label></td><td><input class="base calc-trigger" value="100" /></td><td><input class="dvs calc-trigger" value="15" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr class="sp"><td><label>[S] 스핏</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr><td></td><td></td><td></td><td class='ev-total'>&nbsp;</td><td></td><td></td><td></td></tr>
+                    </table>
+                </div>
+                <div class="info-group info-selectors">
+                    <div class="gen-specific g3 g4 g5 g6 g7">
+                        <label>성격</label>
+                        <select class="nature calc-trigger"><option value="고집">고집 (+공격, -특공)</option><option value="수줍음">수줍음</option><option value="대담">대담 (+방어, -공격)</option><option value="용감">용감 (+공격, -스핏)</option><option value="차분">차분 (+특방, -공격)</option><option value="신중">신중 (+특방, -특공)</option><option value="온순">온순</option><option value="얌전">얌전 (+특방, -방어)</option><option value="노력" selected="selected">노력</option><option value="성급">성급 (+스핏, -방어)</option><option value="장난꾸러기">장난꾸러기 (+방어, -특공)</option><option value="명랑">명랑 (+스핏, -특공)</option><option value="촐랑">촐랑 (+방어, -특방)</option><option value="외로움">외로움 (+공격, -방어)</option><option value="의젓">의젓 (+특공, -방어)</option><option value="조심">조심 (+특공, -공격)</option><option value="천진난만">천진난만 (+스핏, -특방)</option><option value="개구쟁이">개구쟁이 (+공격, -특방)</option><option value="냉정">냉정 (+특공, -스핏)</option><option value="변덕">변덕</option><option value="덜렁">덜렁 (+특공, -특방)</option><option value="무사태평">무사태평 (+방어, -스핏)</option><option value="건방">건방 (+특방, -스핏)</option><option value="성실">성실</option><option value="겁쟁이">겁쟁이 (+스핏, -공격)</option></select>
+                    </div>
+                    <div class="gen-specific g3 g4 g5 g6 g7">
+                        <label>특성</label>
+                        <select class="ability terrain-trigger calc-trigger"></select>
+                    </div>
+                    <div class="gen-specific g2 g3 g4 g5 g6 g7">
+                        <label>지닌 도구</label>
+                        <select class="item terrain-trigger calc-trigger"></select>
+                    </div>
+                    <div>
+                        <label>상태</label>
+                        <select class="status calc-trigger"><option value="정상">정상</option><option value="Poisoned">독</option><option value="Badly Poisoned">맹독</option><option value="Burned">화상</option><option value="마비">마비</option><option value="잠듦">잠듦</option><option value="Frozen">얼음</option></select>
+                        <select class="toxic-counter calc-trigger hide"><option value="1">1/16</option><option value="2">2/16</option><option value="3">3/16</option><option value="4">4/16</option><option value="5">5/16</option><option value="6">6/16</option><option value="7">7/16</option><option value="8">8/16</option><option value="9">9/16</option><option value="10">10/16</option><option value="11">11/16</option><option value="12">12/16</option><option value="13">13/16</option><option value="14">14/16</option><option value="15">15/16</option></select>
+                    </div>
+                </div>
+                <div class="info-group">
+                    <label>현재 HP</label>
+                    <input class="current-hp calc-trigger" value="341" />/<span class="max-hp">341</span> (<input class="percent-hp calc-trigger" value="100" />%)
+                </div>
+                <div class="move1">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="50" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7"><option value="물리">물리</option><option value="특수">특수</option></select>
+                    <input class="move-crit calc-trigger btn-input" type="checkbox" id="critL1" /><label class="btn crit-btn" for="critL1" title="이 기술을 반드시 급소에 맞는 기술로 가정하시겠습니까?">급소</label>
+                    <input class="move-z calc-trigger btn-input" type="checkbox" id="zL1" /><label class="btn x-btn" for="zL1" title="이 기술에 해당되는 Z기술을 사용하시겠습니까?">Z기술</label>
+                    <select class="move-hits calc-trigger hide"><option value="2">2번 맞음</option><option value="3">3번 맞음</option><option value="4">4번 맞음</option><option value="5">5번 맞음</option></select>
+                </div>
+                <div class="move2">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="0" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7"><option value="물리">물리</option><option value="특수">특수</option></select>
+                    <input class="move-crit calc-trigger btn-input" type="checkbox" id="critL2" /><label class="btn crit-btn" for="critL2" title="이 기술을 반드시 급소에 맞는 기술로 가정하시겠습니까?">급소</label>
+                    <input class="move-z calc-trigger btn-input" type="checkbox" id="zL2" /><label class="btn x-btn" for="zL2" title="이 기술에 해당되는 Z기술을 사용하시겠습니까?">Z기술</label>
+                    <select class="move-hits calc-trigger hide"><option value="2">2번 맞음</option><option value="3">3번 맞음</option><option value="4">4번 맞음</option><option value="5">5번 맞음</option></select>
+                </div>
+                <div class="move3">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="0" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7"><option value="물리">물리</option><option value="특수">특수</option></select>
+                    <input class="move-crit calc-trigger btn-input" type="checkbox" id="critL3" /><label class="btn crit-btn" for="critL3" title="이 기술을 반드시 급소에 맞는 기술로 가정하시겠습니까?">급소</label>
+                    <input class="move-z calc-trigger btn-input" type="checkbox" id="zL3" /><label class="btn x-btn" for="zL3" title="이 기술에 해당되는 Z기술을 사용하시겠습니까?">Z기술</label>
+                    <select class="move-hits calc-trigger hide"><option value="2">2번 맞음</option><option value="3">3번 맞음</option><option value="4">4번 맞음</option><option value="5">5번 맞음</option></select>
+                </div>
+                <div class="move4">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="0" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7"><option value="물리">물리</option><option value="특수">특수</option></select>
+                    <input class="move-crit calc-trigger btn-input" type="checkbox" id="critL4" /><label class="btn crit-btn" for="critL4" title="이 기술을 반드시 급소에 맞는 기술로 가정하시겠습니까?">급소</label>
+                    <input class="move-z calc-trigger btn-input" type="checkbox" id="zL4" /><label class="btn x-btn" for="zL4" title="이 기술에 해당되는 Z기술을 사용하시겠습니까?">Z기술</label>
+                    <select class="move-hits calc-trigger hide"><option value="2">2번 맞음</option><option value="3">3번 맞음</option><option value="4">4번 맞음</option><option value="5">5번 맞음</option></select>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="panel field-info">
+            <div class="panel-heading"><h4 class="panel-title">필드</h4></div>
+            <div class="panel-body">
+            <div class="gen-specific g7" style="width: 3.0em; margin: 0 auto 5px;">
+                <a href = "https://www.youtube.com/watch?v=pi7g9LbBv8A">
+                <img align = "middle" src="image_res/mimikyu.png" alt="Mimikyu da yo" height="42" width="42" >
+                </a>
+                </div>
+                <div class="gen-specific g3 g4 g5 g6 g7" style="width: 10.6em; margin: 0 auto 5px;" title="배틀 종류를 선택하세요.">
+                    <input class="btn-input calc-trigger" type="radio" name="format" value="싱글" id="singles" checked="checked" /><label class="btn btn-left" for="singles">싱글</label>
+                    <input class="btn-input calc-trigger" type="radio" name="format" value="더블" id="doubles" /><label class="btn btn-right" for="doubles">더블</label>
+                </div>
+                <div class="gen-specific g6 g7" style="width: 22.0em; margin: 5px auto;" title="현재 지형을 선택하세요.">
+                    <input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="" id="noterrain" checked="checked" /><label class="btn btn-small btn-left" for="noterrain">없음</label>
+                    <input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="일렉트릭" id="electric" /><label class="btn btn-small btn-mid" for="electric">일렉트릭</label>
+                    <input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="그래스" id="grassy" /><label class="btn btn-small btn-mid" for="grassy">그래스</label>
+                    <input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="미스트" id="misty" /><label class="btn btn-small btn-mid" for="misty">미스트</label>
+                    <input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="사이코" id="psychic" /><label class="btn btn-small btn-right" for="psychic">사이코</label>
+                </div>
+                <hr class="gen-specific g6 g7 g7" />
+                <div class="gen-specific g3 g4 g5 g6 g7 g7" style="width: 22.2em; margin: 5px auto;" title="현재 날씨 상태를 선택하세요.">
+                    <input class="btn-input calc-trigger" type="radio" name="weather" value="" id="clear" checked="checked" /><label class="btn btn-small btn-left" for="clear">없음</label>
+                    <input class="btn-input calc-trigger" type="radio" name="weather" value="쾌청" id="sun" /><label class="btn btn-small btn-mid" for="sun">쾌청</label>
+                    <input class="btn-input calc-trigger" type="radio" name="weather" value="비" id="rain" /><label class="btn btn-small btn-mid" for="rain">비</label>
+                    <input class="btn-input calc-trigger" type="radio" name="weather" value="모래바람" id="sand" /><label class="btn btn-small btn-mid" for="sand">모래바람</label>
+                    <input class="btn-input calc-trigger" type="radio" name="weather" value="싸라기눈" id="hail" /><label class="btn btn-small btn-right" for="hail">싸라기눈</label>
+                </div>
+                <div class="gen-specific g6 g7 g7" style="width: 21.1em; margin: 5px auto;" title="현재 날씨 상태를 선택하세요.">
+                    <input class="btn-input calc-trigger" type="radio" name="weather" value="아주 강한 햇살" id="harsh-sun"/><label class="btn btn-wide btn-left" for="harsh-sun">아주 강한 햇살</label>
+                    <input class="btn-input calc-trigger" type="radio" name="weather" value="강한 비" id="heavy-rain"/><label class="btn btn-wide btn-mid" for="heavy-rain">강한 비</label>
+                    <input class="btn-input calc-trigger" type="radio" name="weather" value="난기류" id="strong-winds"/><label class="btn btn-xwide btn-right" for="strong-winds">난기류</label>
+                </div>
+                <div class="gen-specific g2 hide" style="width: 17.8em; margin: 0 auto 5px;" title="현재 날씨 상태를 선택하세요.">
+                    <input class="btn-input calc-trigger" type="radio" name="gscWeather" value="" id="gscClear" checked="checked" /><label class="btn btn-small btn-left" for="gscClear">없음</label>
+                    <input class="btn-input calc-trigger" type="radio" name="gscWeather" value="쾌청" id="gscSun" /><label class="btn btn-small btn-mid" for="gscSun">쾌청</label>
+                    <input class="btn-input calc-trigger" type="radio" name="gscWeather" value="비" id="gscRain" /><label class="btn btn-small btn-mid" for="gscRain">비</label>
+                    <input class="btn-input calc-trigger" type="radio" name="gscWeather" value="모래바람" id="gscSand" /><label class="btn btn-small btn-right" for="gscSand">모래바람</label>
+                </div>
+                <div class="gen-specific g6 g7 g7" style="width: 21.1em; margin: 5px auto;" title="현재 적용 중인 오라를 선택하세요.">
+                <input class="btn-input calc-trigger" type="checkbox" name="aura" value="오라브레이크" id="aura-break"/><label class="btn btn-wide btn-left" for="aura-break">오라브레이크</label>
+                <input class="btn-input calc-trigger" type="checkbox" name="aura" value="페어리오라" id="fairy-aura"/><label class="btn btn-wide btn-mid" for="fairy-aura">페어리오라</label>
+                <input class="btn-input calc-trigger" type="checkbox" name="aura" value="다크오라" id="dark-aura"/><label class="btn btn-wide btn-right" for="dark-aura">다크오라</label>
+                </div>
+                <div class="gen-specific g4 g5 g6 g7 g7" style="width: 5.3em; margin: 5px auto;" title="중력 작용 중으로 가정하시겠습니까?">
+                    <input class="btn-input calc-trigger" type="checkbox" id="gravity" /><label class="btn" for="gravity">중력</label>
+                </div>
+                <hr class="gen-specific g2 g3 g4 g5 g6 g7 g7" />
+                <div class="btn-group gen-specific g4 g5 g6 g7 g7">
+                    <div class="left" title="필드에 스텔스록이 깔려 있습니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="srL" /><label class="btn btn-xwide" for="srL">스텔스록</label>
+                    </div>
+                    <div class="right" title="필드에 스텔스록이 깔려 있습니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="srR" /><label class="btn btn-xwide" for="srR">스텔스록</label>
+                    </div>
+                </div>
+                <div class="btn-group gen-specific g3 g4 g5 g6 g7 g7">
+                    <div class="left" title="필드에 압정이 깔려 있습니까?">
+                        <input class="btn-input calc-trigger" type="radio" name="spikesL" value="0" id="spikesL0" checked="checked" /><label class="btn btn-xsmall btn-left" for="spikesL0">0</label>
+                        <input class="btn-input calc-trigger" type="radio" name="spikesL" value="1" id="spikesL1" /><label class="btn btn-xsmall btn-mid" for="spikesL1">1</label>
+                        <input class="btn-input calc-trigger" type="radio" name="spikesL" value="2" id="spikesL2" /><label class="btn btn-xsmall btn-mid" for="spikesL2">2</label>
+                        <input class="btn-input calc-trigger" type="radio" name="spikesL" value="3" id="spikesL3" /><label class="btn btn-wide btn-right" for="spikesL3">3번 깔림</label>
+                    </div>
+                    <div class="right" title="필드에 압정이 깔려 있습니까?">
+                        <input class="btn-input calc-trigger" type="radio" name="spikesR" value="0" id="spikesR0" checked="checked" /><label class="btn btn-xsmall btn-left" for="spikesR0">0</label>
+                        <input class="btn-input calc-trigger" type="radio" name="spikesR" value="1" id="spikesR1" /><label class="btn btn-xsmall btn-mid" for="spikesR1">1</label>
+                        <input class="btn-input calc-trigger" type="radio" name="spikesR" value="2" id="spikesR2" /><label class="btn btn-xsmall btn-mid" for="spikesR2">2</label>
+                        <input class="btn-input calc-trigger" type="radio" name="spikesR" value="3" id="spikesR3" /><label class="btn btn-wide btn-right" for="spikesR3">3번 깔림</label>
+                    </div>
+                </div>
+                <div class="btn-group gen-specific g2">
+                    <div class="left" title="필드에 압정이 깔려 있습니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="gscSpikesL" /><label class="btn" for="gscSpikesL">압정</label>
+                    </div>
+                    <div class="right" title="필드에 압정이 깔려 있습니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="gscSpikesR" /><label class="btn" for="gscSpikesR">압정</label>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <div class="left" title="포켓몬이 리플렉터나 빛의장막의 효과를 받고 있습니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="reflectL" /><label class="btn btn-left" for="reflectL">리플렉터</label>
+                        <input class="btn-input calc-trigger" type="checkbox" id="lightScreenL" /><label class="btn btn-xwide btn-right" for="lightScreenL">빛의장막</label>
+                    </div>
+                    <div class="right" title="포켓몬이 리플렉터나 빛의장막의 효과를 받고 있습니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="reflectR" /><label class="btn btn-left" for="reflectR">리플렉터</label>
+                        <input class="btn-input calc-trigger" type="checkbox" id="lightScreenR" /><label class="btn btn-xwide btn-right" for="lightScreenR">빛의장막</label>
+                    </div>
+                </div>
+                <div class="btn-group gen-specific g2 g3 g4 g5 g6 g7 g7">
+                    <div class="left" title="포켓몬이 꿰뚫어보기나 냄새구별로 드러내진 상태입니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="foresightL" /><label class="btn btn-wide" for="foresightL">꿰뚫어보기</label>
+                    </div>
+                    <div class="right" title="포켓몬이 꿰뚫어보기나 냄새구별로 드러내진 상태입니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="foresightR" /><label class="btn btn-wide" for="foresightR">꿰뚫어보기</label>
+                    </div>
+                </div>
+                <div class="btn-group gen-specific g3 g4 g5 g6 g7 g7">
+                    <div class="left" title="포켓몬 기술의 위력이 도우미의 효과로 상승된 상태입니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="helpingHandL" /><label class="btn btn-xxwide" for="helpingHandL">도우미</label>
+                    </div>
+                    <div class="right" title="포켓몬 기술의 위력이 도우미의 효과로 상승된 상태입니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="helpingHandR" /><label class="btn btn-xxwide" for="helpingHandR">도우미</label>
+                    </div>
+                </div>
+                <div class="btn-group gen-specific g5 g6 g7 g7">
+                    <div class="left" title="포켓몬이 프렌드가드의 효과를 받고 있습니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="friendGuardL" /><label class="btn btn-xxwide" for="friendGuardL">프렌드가드</label>
+                    </div>
+                    <div class="right" title="포켓몬이 프렌드가드의 효과를 받고 있습니까?">
+                        <input class="btn-input calc-trigger" type="checkbox" id="friendGuardR" /><label class="btn btn-xxwide" for="friendGuardR">프렌드가드</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel poke-info" id="p2">
+            <div class="panel-heading"><h4 class="panel-title">포켓몬 2</h4></div>
+            <div class="panel-body">
+                <input type="text" class="set-selector calc-trigger" />
+                <div class="info-group">
+                    <div>
+                        <label>타입</label>
+                        <select class="type1 terrain-trigger calc-trigger"></select>
+                        <select class="type2 terrain-trigger calc-trigger"></select>
+                    </div>
+                    <div class="hide">
+                        <label>폼</label>
+                        <select class="forme calc-trigger"></select>
+                    </div>
+                    <div>
+                        <label>레벨</label>
+                        <input class="level calc-trigger" value="100" />
+                    </div>
+                    <div class="hide">
+                        <label>몸무게 (kg)</label>
+                        <input class="weight calc-trigger" value="10.0" />
+                    </div>
+                </div>
+                <div class="info-group">
+                    <table>
+                        <tr><th></th><th>종족값</th><th class="gen-specific g3 g4 g5 g6 g7">개체값</th><th class="gen-specific g3 g4 g5 g6 g7">노력치</th><th class="gen-specific g1 g2 hide">DVs</th><th></th><th></th></tr>
+                        <tr class="hp"><td><label>[H] HP</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" disabled="disabled" /></td><td><span class="total">341</span></td><td></td></tr>
+                        <tr class="at"><td><label>[A] 공격</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr class="df"><td><label>[B] 방어</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr class="sa gen-specific g2 g3 g4 g5 g6 g7"><td><label>[C] 특공</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr class="sd gen-specific g2 g3 g4 g5 g6 g7"><td><label>[D] 특방</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" disabled="disabled" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr class="sl gen-specific g1 hide"><td><label>특수</label></td><td><input class="base calc-trigger" value="100" /></td><td><input class="dvs calc-trigger" value="15" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr class="sp"><td><label>[S] 스핏</label></td><td><input class="base calc-trigger" value="100" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="ivs calc-trigger" value="31" /></td><td class="gen-specific g3 g4 g5 g6 g7"><input class="evs calc-trigger" type="number" min="0" max="252" step="4" value="0" /></td><td class="gen-specific g1 g2 hide"><input class="dvs calc-trigger" value="15" /></td><td><span class="total">236</span></td><td><select class="boost calc-trigger"><option value="6">+6</option><option value="5">+5</option><option value="4">+4</option><option value="3">+3</option><option value="2">+2</option><option value="1">+1</option><option value="0" selected="selected">--</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option><option value="-6">-6</option></select></td></tr>
+                        <tr><td></td><td></td><td></td><td class='ev-total'>&nbsp;</td><td></td><td></td><td></td></tr>
+                    </table>
+                </div>
+                <div class="info-group info-selectors">
+                    <div class="gen-specific g3 g4 g5 g6 g7">
+                        <label>성격</label>
+                        <select class="nature calc-trigger"><option value="고집">고집 (+공격, -특공)</option><option value="수줍음">수줍음</option><option value="대담">대담 (+방어, -공격)</option><option value="용감">용감 (+공격, -스핏)</option><option value="차분">차분 (+특방, -공격)</option><option value="신중">신중 (+특방, -특공)</option><option value="온순">온순</option><option value="얌전">얌전 (+특방, -방어)</option><option value="노력" selected="selected">노력</option><option value="성급">성급 (+스핏, -방어)</option><option value="장난꾸러기">장난꾸러기 (+방어, -특공)</option><option value="명랑">명랑 (+스핏, -특공)</option><option value="촐랑">촐랑 (+방어, -특방)</option><option value="외로움">외로움 (+공격, -방어)</option><option value="의젓">의젓 (+특공, -방어)</option><option value="조심">조심 (+특공, -공격)</option><option value="천진난만">천진난만 (+스핏, -특방)</option><option value="개구쟁이">개구쟁이 (+공격, -특방)</option><option value="냉정">냉정 (+특공, -스핏)</option><option value="변덕">변덕</option><option value="덜렁">덜렁 (+특공, -특방)</option><option value="무사태평">무사태평 (+방어, -스핏)</option><option value="건방">건방 (+특방, -스핏)</option><option value="성실">성실</option><option value="겁쟁이">겁쟁이 (+스핏, -공격)</option></select>
+                    </div>
+                    <div class="gen-specific g3 g4 g5 g6 g7">
+                        <label>특성</label>
+                        <select class="ability terrain-trigger calc-trigger"></select>
+                    </div>
+                    <div class="gen-specific g2 g3 g4 g5 g6 g7">
+                        <label>지닌 도구</label>
+                        <select class="item terrain-trigger calc-trigger"></select>
+                    </div>
+                    <div>
+                        <label>상태</label>
+                        <select class="status calc-trigger"><option value="정상">정상</option><option value="독">독</option><option value="맹독">맹독</option><option value="Burned">화상</option><option value="마비">마비</option><option value="잠듦">잠듦</option><option value="Frozen">얼음</option></select>
+                        <select class="toxic-counter calc-trigger hide"><option value="1">1/16</option><option value="2">2/16</option><option value="3">3/16</option><option value="4">4/16</option><option value="5">5/16</option><option value="6">6/16</option><option value="7">7/16</option><option value="8">8/16</option><option value="9">9/16</option><option value="10">10/16</option><option value="11">11/16</option><option value="12">12/16</option><option value="13">13/16</option><option value="14">14/16</option><option value="15">15/16</option></select>
+                    </div>
+                </div>
+                <div class="info-group">
+                    <label>현재 HP</label>
+                    <input class="current-hp calc-trigger" value="341" />/<span class="max-hp">341</span> (<input class="percent-hp calc-trigger" value="100" />%)
+                </div>
+                <div class="move1">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="50" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7"><option value="물리">물리</option><option value="특수">특수</option></select>
+                    <input class="move-crit calc-trigger btn-input" type="checkbox" id="critR1" /><label class="btn crit-btn" for="critR1" title="이 기술을 반드시 급소에 맞는 기술로 가정하시겠습니까?">급소</label>
+                    <input class="move-z calc-trigger btn-input" type="checkbox" id="zR1" /><label class="btn x-btn" for="zR1" title="이 기술에 해당되는 Z기술을 사용하시겠습니까?">Z기술</label>
+                    <select class="move-hits calc-trigger hide"><option value="2">2번 맞음</option><option value="3">3번 맞음</option><option value="4">4번 맞음</option><option value="5">5번 맞음</option></select>
+                </div>
+                <div class="move2">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="0" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7"><option value="물리">물리</option><option value="특수">특수</option></select>
+                    <input class="move-crit calc-trigger btn-input" type="checkbox" id="critR2" /><label class="btn crit-btn" for="critR2" title="이 기술을 반드시 급소에 맞는 기술로 가정하시겠습니까?">급소</label>
+                    <input class="move-z calc-trigger btn-input" type="checkbox" id="zR2" /><label class="btn x-btn" for="zR2" title="이 기술에 해당되는 Z기술을 사용하시겠습니까?">Z기술</label>
+                    <select class="move-hits calc-trigger hide"><option value="2">2번 맞음</option><option value="3">3번 맞음</option><option value="4">4번 맞음</option><option value="5">5번 맞음</option></select>
+                </div>
+                <div class="move3">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="0" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7"><option value="물리">물리</option><option value="특수">특수</option></select>
+                    <input class="move-crit calc-trigger btn-input" type="checkbox" id="critR3" /><label class="btn crit-btn" for="critR3" title="이 기술을 반드시 급소에 맞는 기술로 가정하시겠습니까?">급소</label>
+                    <input class="move-z calc-trigger btn-input" type="checkbox" id="zR3" /><label class="btn x-btn" for="zR3" title="이 기술에 해당되는 Z기술을 사용하시겠습니까?">Z기술</label>
+                    <select class="move-hits calc-trigger hide"><option value="2">2번 맞음</option><option value="3">3번 맞음</option><option value="4">4번 맞음</option><option value="5">5번 맞음</option></select>
+                </div>
+                <div class="move4">
+                    <select class="move-selector calc-trigger small-select"></select>
+                    <input class="move-bp calc-trigger" value="0" />
+                    <select class="move-type calc-trigger"></select>
+                    <select class="move-cat calc-trigger gen-specific g4 g5 g6 g7"><option value="물리">물리</option><option value="특수">특수</option></select>
+                    <input class="move-crit calc-trigger btn-input" type="checkbox" id="critR4" /><label class="btn crit-btn" for="critR4" title="이 기술을 반드시 급소에 맞는 기술로 가정하시겠습니까?">급소</label>
+                    <input class="move-z calc-trigger btn-input" type="checkbox" id="zR4" /><label class="btn x-btn" for="zR4" title="이 기술에 해당되는 Z기술을 사용하시겠습니까?">Z기술</label>
+                    <select class="move-hits calc-trigger hide"><option value="2">2번 맞음</option><option value="3">3번 맞음</option><option value="4">4번 맞음</option><option value="5">5번 맞음</option></select>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p><em>이 계산기는 Honko, gamut, Zarel의 작업에 기초하여 만들어졌으며, 포켓몬 챔피언쉽 시리즈의 플레이어인 Tapin, Firestorm, squirrelboy1225가 최적화하였습니다.</em></p></div>
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="script_res/select2.min.js"></script>
+    <script type="text/javascript" src="script_res/pokedex.js"></script>
+    <script type="text/javascript" src="script_res/setdex_showdown.js"></script>
+    <script type="text/javascript" src="script_res/setdex_globalLink.js"></script>
+    <script type="text/javascript" src="script_res/setdex_nuggetBridge.js"></script>
+    <script type="text/javascript" src="script_res/setdex_xy.js" id = "XYScript"></script>
+    <script type="text/javascript" src="script_res/setdex_sm.js" id = "SMScript"></script>
+    <script type="text/javascript" src="script_res/setdex_bw.js"></script>
+    <script type="text/javascript" src="script_res/setdex_dpp.js"></script>
+    <script type="text/javascript" src="script_res/setdex_rse.js"></script>
+    <script type="text/javascript" src="script_res/setdex_gsc.js"></script>
+    <script type="text/javascript" src="script_res/setdex_rby.js"></script>
+    <script type="text/javascript" src="script_res/stat_data.js"></script>
+    <script type="text/javascript" src="script_res/type_data.js"></script>
+    <script type="text/javascript" src="script_res/nature_data.js"></script>
+    <script type="text/javascript" src="script_res/ability_data.js"></script>
+    <script type="text/javascript" src="script_res/item_data.js"></script>
+    <script type="text/javascript" src="script_res/move_data.js"></script>
+    <script type="text/javascript" src="script_res/ap_calc.js"></script>
+    <script type="text/javascript" src="script_res/damage.js"></script>
+    <script type="text/javascript" src="script_res/damage_dpp.js"></script>
+    <script type="text/javascript" src="script_res/damage_rse.js"></script>
+    <script type="text/javascript" src="script_res/damage_gsc.js"></script>
+    <script type="text/javascript" src="script_res/damage_rby.js"></script>
+    <script type="text/javascript" src="script_res/ko_chance.js"></script>
+
+</body>
+</html>
