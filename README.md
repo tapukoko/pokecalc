@@ -1,5 +1,5 @@
-# Æ÷ÄÏ¸ó µ¥¹ÌÁö °è»ê±â
+# í¬ì¼“ëª¬ ë°ë¯¸ì§€ ê³„ì‚°ê¸°
 
-* ÀÌ °è»ê±â´Â [jake-whiteÀÇ Nugget Bridge Pokemon Damage Calculator - VGC 2017 Edition](https://github.com/jake-white/VGC-Damage-Calculator)¸¦ ÇÑ±¹¾î·Î ¹ø¿ªÇÑ °ÍÀÔ´Ï´Ù.
+* ì´ ê³„ì‚°ê¸°ëŠ” [jake-whiteì˜ Nugget Bridge Pokemon Damage Calculator - VGC 2017 Edition](https://github.com/jake-white/VGC-Damage-Calculator)ë¥¼ í•œêµ­ì–´ë¡œ ë²ˆì—­í•œ ê²ƒì…ë‹ˆë‹¤.
 
-* [ÀÌ ÆäÀÌÁö](http://lilymaniac.github.io/calc)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.
+* [ì´ í˜ì´ì§€](http://tapukoko.github.io/pokecalc)ì—ì„œ í™•ì¸í•˜ì‹¤ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
