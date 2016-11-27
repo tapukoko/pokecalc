@@ -1,4 +1,4 @@
-﻿var SETDEX_CUSTOM = {};
+var SETDEX_CUSTOM = {};
 var showdownFormes = [["화이트큐레무", "화이트큐레무"],
 ["블랙큐레무", "블랙큐레무"],
 ["워시로토무", "워시로토무"],
@@ -23,7 +23,7 @@ var deletecustom = function()
 {
 	SETDEX_CUSTOM = {}
 	eraseCookie("custom")
-    reloadXYScript()
+    reloadSMScript()
 }
 
 function createCookie(name,value,days) {
@@ -57,7 +57,7 @@ var savecustom = function()
 	var string = document.getElementById('customMon').value
 	var spreadName = document.getElementById('spreadName').value
 	if(spreadName == '')
-		spreadName = "내 커스텀 세트";
+		spreadName = "나의 샘플";
 	var lines = string.split('\n')
 	var species = "";
 	var item = "";
@@ -65,7 +65,7 @@ var savecustom = function()
 	var level = "50";
 	var EVs = [0,0,0,0,0,0];
 	var IVs = [31,31,31,31,31,31]
-	var nature = "성실"
+	var nature = "노력"
 	var moves = []
 
 	/*	Pokemon Showdown Export Format
@@ -73,7 +73,7 @@ var savecustom = function()
 1	Ability: Name
 2	Level: #
 3	EVs: # Stat / # Stat / # Stat
-4	성실 성격
+4	Serious Nature
 5	IVs: # Stat
 6	- Move Name
 7	- Move Name
@@ -111,54 +111,54 @@ var savecustom = function()
 	ability = lines[1].substring(lines[1].indexOf(' ')+1).trim(); //ability is always second
 	if(lines.length > 2){
 		for(var i = 2; i < lines.length; ++i){
-			if(lines[i].indexOf("Level") != -1){
+			if(lines[i].indexOf("레벨") != -1){
 				level = lines[2].split(' ')[1].trim(); //level is sometimes third but uh not always
 			}
-			if(lines[i].indexOf("EVs") != -1) //if EVs are in this line
+			if(lines[i].indexOf("노력치") != -1) //if EVs are in this line
 			{
 				evList = lines[i].split(':')[1].split('/'); //splitting it into a list of " # Stat "
 				for(var j = 0; j < evList.length; ++j){
 					evList[j] = evList[j].trim();
 					evListElements = evList[j].split(' ');
-					if(evListElements[1] == "HP")
+					if     (evListElements[1] == "H")
 						EVs[0] = parseInt(evListElements[0])
-					else if(evListElements[1] == "공격")
+					else if(evListElements[1] == "A")
 						EVs[1] = parseInt(evListElements[0])
-					else if(evListElements[1] == "방어")
+					else if(evListElements[1] == "B")
 						EVs[2] = parseInt(evListElements[0])
-					else if(evListElements[1] == "특공")
+					else if(evListElements[1] == "C")
 						EVs[3] = parseInt(evListElements[0])
-					else if(evListElements[1] == "특방")
+					else if(evListElements[1] == "D")
 						EVs[4] = parseInt(evListElements[0])
-					else if(evListElements[1] == "스핏")
+					else if(evListElements[1] == "S")
 						EVs[5] = parseInt(evListElements[0])
 				}
 
 			}
-			if(lines[i].indexOf("IVs") != -1) //if EVs are in this line
+			if(lines[i].indexOf("개체값") != -1) //if EVs are in this line
 			{
 				ivList = lines[i].split(':')[1].split('/'); //splitting it into a list of " # Stat "
 				for(var j = 0; j < ivList.length; ++j){
 					ivList[j] = ivList[j].trim();
 					ivListElements = ivList[j].split(' ');
-					if(ivListElements[1] == "HP")
+					if     (ivListElements[1] == "H")
 						IVs[0] = parseInt(ivListElements[0])
-					else if(ivListElements[1] == "공격")
+					else if(ivListElements[1] == "A")
 						IVs[1] = parseInt(ivListElements[0])
-					else if(ivListElements[1] == "방어")
+					else if(ivListElements[1] == "B")
 						IVs[2] = parseInt(ivListElements[0])
-					else if(ivListElements[1] == "특공")
+					else if(ivListElements[1] == "C")
 						IVs[3] = parseInt(ivListElements[0])
-					else if(ivListElements[1] == "특방")
+					else if(ivListElements[1] == "D")
 						IVs[4] = parseInt(ivListElements[0])
-					else if(ivListElements[1] == "스핏")
+					else if(ivListElements[1] == "S")
 						IVs[5] = parseInt(ivListElements[0])
 				}
 
 			}
 			if(lines[i].indexOf("성격") != -1) //if nature is in this line
 			{
-				nature = lines[i].split(' ')[0].trim()
+				nature = lines[i].substring(lines[1].indexOf(' ')+1).trim();
 			}
 			if(lines[i].indexOf("- ") != -1){ //if there is a move in this line
 				var nextMove = lines[i].substring(lines[i].indexOf(' ') + 1).trim()
@@ -172,7 +172,7 @@ var savecustom = function()
 
 	//now, to save it
 	/* Sample Calculator Format:
-  "메가자리": {
+  "Yanmega": {
     "Common Showdown": {
       "level": 50,
       "evs": {
@@ -183,14 +183,14 @@ var savecustom = function()
         "sd": 4,
         "sp": 252
       },
-      "nature": "조심",
+      "nature": "Modest",
       "ability": "",
       "item": "",
       "moves": [
-        "에어슬래시",
-        "벌레의야단법석",
-        "기가드레인",
-        "잠재파워-얼음"
+        "Air Slash",
+        "Bug Buzz",
+        "Giga Drain",
+        "Hidden Power Ice"
       ]
     }
   }
@@ -224,7 +224,7 @@ var savecustom = function()
   		SETDEX_CUSTOM[species] = {}
   	SETDEX_CUSTOM[species][spreadName] = customFormat
     document.cookie = "custom="+JSON.stringify(SETDEX_CUSTOM)
-    reloadXYScript()
+    reloadSMScript()
 
 
 }
