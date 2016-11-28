@@ -379,7 +379,7 @@ function CALCULATE_DAMAGE_DPP(attacker, defender, move, field) {
     }
     
     var filterMod = 1;
-    if ((defAbility === "필터" || defAbility === "하드록" || defAbility === "프리즘아머") && typeEffectiveness > 1) {
+    if ((defAbility === "필터" || defAbility === "하드록") && typeEffectiveness > 1) {
         filterMod = 0.75;
         description.defenderAbility = defAbility;
     }
