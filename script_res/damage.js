@@ -348,7 +348,7 @@ function getDamageResult(attacker, defender, move, field) {
     }
     
     if(move.type === "강철" && attacker.ability === "강철술사"){
-        bpMods.push(0x1547);
+        bpMods.push(0x1800);
     }
     
     basePower = Math.max(1, pokeRound(basePower * chainMods(bpMods) / 0x1000));
