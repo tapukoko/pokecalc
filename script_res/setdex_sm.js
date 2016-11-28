@@ -9259,7 +9259,7 @@ var SETDEX_SM={
         "at": 252,
         "df": 0,
         "sa": 0,
-        "sd": 38,
+        "sd": 36,
         "sp": 0
       },
       "nature": "고집",
