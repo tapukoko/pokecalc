@@ -1,4 +1,4 @@
-﻿function CALCULATE_ALL_MOVES_BW(p1, p2, field) {
+function CALCULATE_ALL_MOVES_BW(p1, p2, field) {
     checkAirLock(p1, field);
     checkAirLock(p2, field);
     checkForecast(p1, field.getWeather());
@@ -553,7 +553,7 @@ function getDamageResult(attacker, defender, move, field) {
         finalMods.push(0x1800);
         description.attackerAbility = attacker.ability;
     }
-    if ((defAbility === "하드록" || defAbility === "필터") && typeEffectiveness > 1) {
+    if ((defAbility === "하드록" || defAbility === "필터" || defAbility === "프리즘아머") && typeEffectiveness > 1) {
         finalMods.push(0xC00);
         description.defenderAbility = defAbility;
     }
