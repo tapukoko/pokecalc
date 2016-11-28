@@ -1,4 +1,4 @@
-﻿var MOVES_RBY = {
+var MOVES_RBY = {
     '(기술 없음)': {
         bp: 0,
         type: '노말',
@@ -1888,8 +1888,9 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
     '사이코팽': {
         category: '물리',
         type: '에스퍼',
-        bp: 95,
-        zp: 160
+        bp: 85,
+        zp: 160,
+		isBite: true
     },
     '플뢰르캐논': {
         category: '특수',
