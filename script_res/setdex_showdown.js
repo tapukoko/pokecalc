@@ -1,4 +1,4 @@
-﻿var SETDEX_SHOWDOWN={
+var SETDEX_SHOWDOWN={
   "스왈로": {
     "일반 쇼다운": {
       "level": 50,
@@ -270,7 +270,7 @@
         "sp": 252
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "구애스카프",
       "moves": [
         "지진",
@@ -314,7 +314,7 @@
         "sp": 228
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "구애스카프",
       "moves": [
         "지진",
@@ -336,7 +336,7 @@
         "sp": 0
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "입치트나이트",
       "moves": [
         "치근거리기",
@@ -1612,7 +1612,7 @@
         "sp": 252
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "생명의구슬",
       "moves": [
         "독찌르기",
@@ -2641,7 +2641,7 @@
         "sp": 0
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "돌격조끼",
       "moves": [
         "치근거리기",
@@ -2905,7 +2905,7 @@
         "sp": 252
       },
       "nature": "장난꾸러기",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "",
       "moves": [
         "에어슬래시",
@@ -2927,7 +2927,7 @@
         "sp": 252
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "갸라도스나이트",
       "moves": [
         "폭포오르기",
@@ -4489,7 +4489,7 @@
         "sp": 252
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "먹다남은음식",
       "moves": [
         "바크아웃",
@@ -4753,7 +4753,7 @@
         "sp": 0
       },
       "nature": "명랑",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "검은진흙",
       "moves": [
         "더스트슈트",
@@ -5937,7 +5937,7 @@
         "sp": 252
       },
       "nature": "겁쟁이",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "",
       "moves": [
         "은혜갚기",
@@ -6025,7 +6025,7 @@
         "sp": 0
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "자뭉열매",
       "moves": [
         "와일드볼트",
@@ -6377,7 +6377,7 @@
         "sp": 0
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "생명의구슬",
       "moves": [
         "기습",
@@ -6443,7 +6443,7 @@
         "sp": 0
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "리샘열매",
       "moves": [
         "속이다",
@@ -6663,7 +6663,7 @@
         "sp": 252
       },
       "nature": "명랑",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "구애스카프",
       "moves": [
         "브레이브버드",
@@ -6729,7 +6729,7 @@
         "sp": 252
       },
       "nature": "명랑",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "보만다나이트",
       "moves": [
         "이판사판태클",
@@ -7829,7 +7829,7 @@
         "sp": 0
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "자뭉열매",
       "moves": [
         "속이다",
@@ -7885,7 +7885,7 @@
   },  
 
   "원시그란돈": {
-    "Common Physical Showdown": {
+    "일반 쇼다운 물리형": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -7905,7 +7905,7 @@
         "지진"
       ]
     },
-    "Common Mixed Showdown": {
+    "일반 쇼다운 쌍두형": {
       "level": 50,
       "evs": {
         "hp": 4,
@@ -7951,7 +7951,7 @@
   },  
 
   "그란돈": {
-    "Common Physical Showdown": {
+    "일반 쇼다운 물리형": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -7971,7 +7971,7 @@
         "지진"
       ]
     },
-    "Common Mixed Showdown": {
+    "일반 쇼다운 쌍두형": {
       "level": 50,
       "evs": {
         "hp": 4,
@@ -7994,7 +7994,7 @@
   },
 
   "레쿠쟈": {
-    "일반 쇼다운 Physical": {
+    "일반 쇼다운 물리형": {
       "level": 50,
       "evs": {
         "hp": 4,
@@ -8015,7 +8015,7 @@
       ]
     },
 
-    "일반 쇼다운 Mixed": {
+    "일반 쇼다운 쌍두형": {
       "level": 50,
       "evs": {
         "hp": 0,
