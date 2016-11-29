@@ -740,7 +740,7 @@ var MOVES_ADV = $.extend(true, {}, MOVES_GSC, {
         hasSecondaryEffect: true,
         isPulse: true
     },
-    '해수스파우팅': {
+    '바지락조개': {
         bp: 150,
         type: '물',
         category: '특수',
@@ -1795,6 +1795,7 @@ var MOVES_XY = $.extend(true, {}, MOVES_BW, {
     }
 });
 
+/*
 MOVES_XY['원시의힘'] = MOVES_XY['원시의힘'];
 MOVES_XY['폭발펀치'] = MOVES_XY['폭발펀치'];
 MOVES_XY['신속'] = MOVES_XY['신속'];
@@ -1811,6 +1812,9 @@ delete MOVES_XY['무릎차기'];
 delete MOVES_XY['자폭'];
 delete MOVES_XY['솔라빔'];
 delete MOVES_XY['번개펀치'];
+*/
+MOVES_XY['해수스파우팅'] = MOVES_XY['바지락조개'];
+delete MOVES_XY['바지락조개'];
 
 var ZMOVES_LOOKUP = {
     '노말':'울트라대시어택','불꽃':'다이내믹풀플레임','물':'슈퍼아쿠아토네이도',
