@@ -1,4 +1,4 @@
-﻿var SETDEX_NUGGETBRIDGE={
+var SETDEX_NUGGETBRIDGE={
   "보만다": {
     "DaWoblefet의 2015 겨울 보만다": {
       "level": 50,
@@ -10,7 +10,7 @@
         "sp": "196"
       },
       "nature": "명랑",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "보만다나이트",
       "moves": [
         "화풀이",
@@ -27,7 +27,7 @@
         "sp": "252"
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "보만다나이트",
       "moves": [
         "",
@@ -44,7 +44,7 @@
         "sp": "188"
       },
       "nature": "명랑",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "보만다나이트",
       "moves": [
         "이판사판태클",
@@ -61,7 +61,7 @@
         "sp": "252"
       },
       "nature": "명랑",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "보만다나이트",
       "moves": [
         "이판사판태클",
@@ -446,7 +446,7 @@
         "sp": "52"
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "입치트나이트",
       "moves": [
         "치근거리기",
@@ -733,7 +733,7 @@
         "sp": "252"
       },
       "nature": "명랑",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "구애머리띠",
       "moves": [
         "지진",
@@ -750,7 +750,7 @@
         "sp": "252"
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "구애스카프",
       "moves": [
         "지진",
@@ -769,7 +769,7 @@
         "sp": "148"
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "구애스카프",
       "moves": [
         "지진",
@@ -788,7 +788,7 @@
         "sp": "132"
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "구애스카프",
       "moves": [
         "지진",
@@ -1158,7 +1158,7 @@
         "sd": "76"
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "돌격조끼",
       "moves": [
         "치근거리기",
@@ -1233,7 +1233,7 @@
         "sp": "252"
       },
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "리샘열매",
       "moves": [
         "폭포오르기",
