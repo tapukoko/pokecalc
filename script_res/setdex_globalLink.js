@@ -1,4 +1,4 @@
-﻿var SETDEX_GLOBALLINK={
+var SETDEX_GLOBALLINK={
   "붐볼": {
     "일반 배틀스폿": {
       "level": 50,
@@ -334,7 +334,7 @@
       "level": 50,
       "evs": {},
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "갸라도스나이트",
       "moves": [
         "폭포오르기",
@@ -1036,7 +1036,7 @@
       "level": 50,
       "evs": {},
       "nature": "용감",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "돌격조끼",
       "moves": [
         "치근거리기",
@@ -1276,7 +1276,7 @@
       "level": 50,
       "evs": {},
       "nature": "건방",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "",
       "moves": [
         "",
@@ -1306,7 +1306,7 @@
       "level": 50,
       "evs": {},
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "",
       "moves": [
         "속이다",
@@ -1321,7 +1321,7 @@
       "level": 50,
       "evs": {},
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "생명의구슬",
       "moves": [
         "더스트슈트",
@@ -1546,7 +1546,7 @@
       "level": 50,
       "evs": {},
       "nature": "겁쟁이",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "구애스카프",
       "moves": [
         "바크아웃",
@@ -1708,7 +1708,7 @@
       "level": 50,
       "evs": {},
       "nature": "겁쟁이",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "",
       "moves": [
         "",
@@ -1873,7 +1873,7 @@
       "level": 50,
       "evs": {},
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "입치트나이트",
       "moves": [
         "기습",
@@ -2578,7 +2578,7 @@
       "level": 50,
       "evs": {},
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "보만다나이트",
       "moves": [
         "",
@@ -2773,7 +2773,7 @@
       "level": 50,
       "evs": {},
       "nature": "명랑",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "구애스카프",
       "moves": [
         "브레이브버드",
@@ -2818,7 +2818,7 @@
       "level": 50,
       "evs": {},
       "nature": "차분",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "자뭉열매",
       "moves": [
         "볼트체인지",
@@ -4243,7 +4243,7 @@
       "level": 50,
       "evs": {},
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "구애스카프",
       "moves": [
         "지진",
@@ -4303,7 +4303,7 @@
       "level": 50,
       "evs": {},
       "nature": "용감",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "진화의휘석",
       "moves": [
         "드레인펀치",
@@ -4318,7 +4318,7 @@
       "level": 50,
       "evs": {},
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "리샘열매",
       "moves": [
         "속이다",
@@ -4588,7 +4588,7 @@
       "level": 50,
       "evs": {},
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "생명의구슬",
       "moves": [
         "신속",
@@ -5218,7 +5218,7 @@
       "level": 50,
       "evs": {},
       "nature": "고집",
-      "ability": "괴력집게",
+      "ability": "위협",
       "item": "구애스카프",
       "moves": [
         "지진",
