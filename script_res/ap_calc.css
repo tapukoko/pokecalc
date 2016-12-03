@@ -69,6 +69,9 @@ th {
 .btn-xxxwide {
     width: 10em;
 }
+.btn-med {
+    width: 4.5em;
+}
 .btn-small {
     width: 4em;
 }
