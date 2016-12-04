@@ -2090,6 +2090,1201 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
         type: '전기',
         bp: 210
     },
+	'금속음': {
+		category: '변화',
+		type: '강철',
+		bp: 0
+	},
+	'기어체인지': {
+		category: '변화',
+		type: '강철',
+		bp: 0
+	},
+	'바디퍼지': {
+		category: '변화',
+		type: '강철',
+		bp: 0
+	},
+	'어시스트기어': {
+		category: '변화',
+		type: '강철',
+		bp: 0
+	},
+	'철벽': {
+		category: '변화',
+		type: '강철',
+		bp: 0
+	},
+	'킹실드': {
+		category: '변화',
+		type: '강철',
+		bp: 0
+	},
+	'마룻바닥세워막기': {
+		category: '변화',
+		type: '격투',
+		bp: 0
+	},
+	'벌크업': {
+		category: '변화',
+		type: '격투',
+		bp: 0
+	},
+	'판별': {
+		category: '변화',
+		type: '격투',
+		bp: 0
+	},
+	'퍼스트가드': {
+		category: '변화',
+		type: '격투',
+		bp: 0
+	},
+	'길동무': {
+		category: '변화',
+		type: '고스트',
+		bp: 0
+	},
+	'악몽': {
+		category: '변화',
+		type: '고스트',
+		bp: 0
+	},
+	'원념': {
+		category: '변화',
+		type: '고스트',
+		bp: 0
+	},
+	'원한': {
+		category: '변화',
+		type: '고스트',
+		bp: 0
+	},
+	'이상한빛': {
+		category: '변화',
+		type: '고스트',
+		bp: 0
+	},
+	'저주': {
+		category: '변화',
+		type: '고스트',
+		bp: 0
+	},
+	'핼러윈': {
+		category: '변화',
+		type: '고스트',
+		bp: 0
+	},
+	'HP회복': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'각지기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'간지르기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'검은눈빛': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'겁나는얼굴': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'경혈찌르기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'그림자분신': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'기충전': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'기프트패스': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'껍질깨기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'꼬리흔들기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'꿀꺽': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'꿰뚫어보기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'날려버리기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'날따름': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'냄새구별': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'노래하기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'눈물그렁그렁': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'단단해지기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'달콤한향기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'당신먼저': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'대타출동': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'도우미': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'동료만들기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'록온': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'리사이클': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'리프레쉬': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'마음의눈': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'멀리짖음': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'멸망의노래': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'미러타입': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'바톤터치': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'방어': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'배북': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'뱀눈초리': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'버티기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'변신': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'보호색': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'부르짖기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'분발': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'블록': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'비밀이야기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'비축하기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'뽐내기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'사슬묶기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'선취': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'성장': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'손가락흔들기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'손에손잡기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'스케치': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'스포트라이트': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'신비의부적': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'싫은소리': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'심플빔': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'아침햇살': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'아픔나누기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'악마의키스': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'알낳기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'앵콜': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'연막': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'예민해지기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'우유마시기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'울부짖기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'울음소리': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'웅크리기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'유혹': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'자기암시': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'자연의힘': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'작아지기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'잠꼬대': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'조수': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'주술': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'째려보기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'초음파': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'축하': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'치료방울': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'친해지기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'칼춤': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'태만함': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'텍스처': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'텍스처2': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'튀어오르기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'플래시': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'하품': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'해피타임': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'헤롱헤롱': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'흉내내기': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'흉내쟁이': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'흔들흔들댄스': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'희망사항': {
+		category: '변화',
+		type: '노말',
+		bp: 0
+	},
+	'녹기': {
+		category: '변화',
+		type: '독',
+		bp: 0
+	},
+	'독가루': {
+		category: '변화',
+		type: '독',
+		bp: 0
+	},
+	'독가스': {
+		category: '변화',
+		type: '독',
+		bp: 0
+	},
+	'독실': {
+		category: '변화',
+		type: '독',
+		bp: 0
+	},
+	'독압정': {
+		category: '변화',
+		type: '독',
+		bp: 0
+	},
+	'똬리틀기': {
+		category: '변화',
+		type: '독',
+		bp: 0
+	},
+	'맹독': {
+		category: '변화',
+		type: '독',
+		bp: 0
+	},
+	'베놈트랩': {
+		category: '변화',
+		type: '독',
+		bp: 0
+	},
+	'위액': {
+		category: '변화',
+		type: '독',
+		bp: 0
+	},
+	'정화': {
+		category: '변화',
+		type: '독',
+		bp: 0
+	},
+	'토치카': {
+		category: '변화',
+		type: '독',
+		bp: 0
+	},
+	'용의춤': {
+		category: '변화',
+		type: '드래곤',
+		bp: 0
+	},
+	'모래모으기': {
+		category: '변화',
+		type: '땅',
+		bp: 0
+	},
+	'모래뿌리기': {
+		category: '변화',
+		type: '땅',
+		bp: 0
+	},
+	'압정뿌리기': {
+		category: '변화',
+		type: '땅',
+		bp: 0
+	},
+	'일구기': {
+		category: '변화',
+		type: '땅',
+		bp: 0
+	},
+	'흙놀이': {
+		category: '변화',
+		type: '땅',
+		bp: 0
+	},
+	'껍질에숨기': {
+		category: '변화',
+		type: '물',
+		bp: 0
+	},
+	'물놀이': {
+		category: '변화',
+		type: '물',
+		bp: 0
+	},
+	'물붓기': {
+		category: '변화',
+		type: '물',
+		bp: 0
+	},
+	'비바라기': {
+		category: '변화',
+		type: '물',
+		bp: 0
+	},
+	'아쿠아링': {
+		category: '변화',
+		type: '물',
+		bp: 0
+	},
+	'록커트': {
+		category: '변화',
+		type: '바위',
+		bp: 0
+	},
+	'스텔스록': {
+		category: '변화',
+		type: '바위',
+		bp: 0
+	},
+	'와이드가드': {
+		category: '변화',
+		type: '바위',
+		bp: 0
+	},
+	'모래바람': {
+		category: '변화',
+		type: '바위',
+		bp: 0
+	},
+	'거미집': {
+		category: '변화',
+		type: '벌레',
+		bp: 0
+	},
+	'끈적끈적네트': {
+		category: '변화',
+		type: '벌레',
+		bp: 0
+	},
+	'나비춤': {
+		category: '변화',
+		type: '벌레',
+		bp: 0
+	},
+	'반딧불': {
+		category: '변화',
+		type: '벌레',
+		bp: 0
+	},
+	'방어지령': {
+		category: '변화',
+		type: '벌레',
+		bp: 0
+	},
+	'분노가루': {
+		category: '변화',
+		type: '벌레',
+		bp: 0
+	},
+	'분진': {
+		category: '변화',
+		type: '벌레',
+		bp: 0
+	},
+	'실뿜기': {
+		category: '변화',
+		type: '벌레',
+		bp: 0
+	},
+	'회복지령': {
+		category: '변화',
+		type: '벌레',
+		bp: 0
+	},
+	'도깨비불': {
+		category: '변화',
+		type: '불꽃',
+		bp: 0
+	},
+	'쾌청': {
+		category: '변화',
+		type: '불꽃',
+		bp: 0
+	},
+	'깃털댄스': {
+		category: '변화',
+		type: '비행',
+		bp: 0
+	},
+	'날개쉬기': {
+		category: '변화',
+		type: '비행',
+		bp: 0
+	},
+	'따라하기': {
+		category: '변화',
+		type: '비행',
+		bp: 0
+	},
+	'순풍': {
+		category: '변화',
+		type: '비행',
+		bp: 0
+	},
+	'안개제거': {
+		category: '변화',
+		type: '비행',
+		bp: 0
+	},
+	'가로챔': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'거짓울음': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'금제': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'나쁜음모': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'다크홀': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'도발': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'뒤집어엎기': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'막말내뱉기': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'바꿔치기': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'부추기기': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'손톱갈기': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'순서미루기': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'추억의선물': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'트집': {
+		category: '변화',
+		type: '악',
+		bp: 0
+	},
+	'싸라기눈': {
+		category: '변화',
+		type: '얼음',
+		bp: 0
+	},
+	'오로라베일': {
+		category: '변화',
+		type: '얼음',
+		bp: 0
+	},
+	'흑안개': {
+		category: '변화',
+		type: '얼음',
+		bp: 0
+	},
+	'흰안개': {
+		category: '변화',
+		type: '얼음',
+		bp: 0
+	},
+	'가드셰어': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'가드스웹': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'고속이동': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'리플렉터': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'망각술': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'매직룸': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'매직코트': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'명상': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'미라클아이': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'배리어': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'봉인': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'빛의장막': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'사이드체인지': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'사이코시프트': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'사이코필드': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'숟가락휘기': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'스킬스웹': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'스피드스웹': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'역할': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'요가포즈': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'원더룸': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'잠자기': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'중력': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'지휘': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'초승달춤': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'최면술': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'치유소원': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'치유파동': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'코스믹파워': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'텔레키네시스': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'순간이동': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'트릭': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'트릭룸': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'파워셰어': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'파워스웹': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'파워트릭': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'하트스웹': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'회복봉인': {
+		category: '변화',
+		type: '에스퍼',
+		bp: 0
+	},
+	'괴전파': {
+		category: '변화',
+		type: '전기',
+		bp: 0
+	},
+	'송전': {
+		category: '변화',
+		type: '전기',
+		bp: 0
+	},
+	'일렉트릭필드': {
+		category: '변화',
+		type: '전기',
+		bp: 0
+	},
+	'자기장조작': {
+		category: '변화',
+		type: '전기',
+		bp: 0
+	},
+	'전기자석파': {
+		category: '변화',
+		type: '전기',
+		bp: 0
+	},
+	'전자부유': {
+		category: '변화',
+		type: '전기',
+		bp: 0
+	},
+	'충전': {
+		category: '변화',
+		type: '전기',
+		bp: 0
+	},
+	'플라스마샤워': {
+		category: '변화',
+		type: '전기',
+		bp: 0
+	},
+	'달의불빛': {
+		category: '변화',
+		type: '페어리',
+		bp: 0
+	},
+	'미스트필드': {
+		category: '변화',
+		type: '페어리',
+		bp: 0
+	},
+	'아로마미스트': {
+		category: '변화',
+		type: '페어리',
+		bp: 0
+	},
+	'애교부리기': {
+		category: '변화',
+		type: '페어리',
+		bp: 0
+	},
+	'지오컨트롤': {
+		category: '변화',
+		type: '페어리',
+		bp: 0
+	},
+	'천사의키스': {
+		category: '변화',
+		type: '페어리',
+		bp: 0
+	},
+	'초롱초롱눈동자': {
+		category: '변화',
+		type: '페어리',
+		bp: 0
+	},
+	'트릭가드': {
+		category: '변화',
+		type: '페어리',
+		bp: 0
+	},
+	'페어리록': {
+		category: '변화',
+		type: '페어리',
+		bp: 0
+	},
+	'플라워가드': {
+		category: '변화',
+		type: '페어리',
+		bp: 0
+	},
+	'플라워힐': {
+		category: '변화',
+		type: '페어리',
+		bp: 0
+	},
+	'고민씨': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'광합성': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'그래스필드': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'니들가드': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'목화포자': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'버섯포자': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'뿌리박기': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'수면가루': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'숲의저주': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'씨뿌리기': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'아로마테라피': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'저리가루': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'코튼가드': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'풀피리': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
+	'힘흡수': {
+		category: '변화',
+		type: '풀',
+		bp: 0
+	},
     '울트라대시어택': {
         type: '노말'
     },
