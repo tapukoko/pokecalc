@@ -261,8 +261,9 @@
                         <input class="btn-input calc-trigger" type="checkbox" id="friendGuardR" /><label class="btn btn-wide" for="friendGuardR">프렌드가드</label>
                     </div>
                 </div>
-                                <!--squirrelboy1225's HTML additions are right here-->
-                <p><b>커스텀 샘플 추가</b></p>
+				
+                <p><b>커스텀 샘플 추가</b> <input type='button' id='customAreaToggle' value='▼'></p>
+				<div id="customArea">
                 샘플 이름: <input type = "text" id = "spreadName" style = "width: 60%" value = "나의 샘플"> <input type="button" onclick="custom_example()" value="예시">
                 <br>
 <textarea rows="10" cols="46" id = "customMon" style = "font-size:9pt">
@@ -281,9 +282,10 @@
                 <script type="text/javascript" src="script_res/setdex_custom.js"></script>
                 <button type = "button" onclick = "savecustom()">저장</button> <button type = "button" onclick = "deletecustom()">커스텀 샘플 삭제</button>
                 <p>커스텀 샘플을 삭제하신 후에는 새로고침을 눌러주셔야 할겁니다. 버그가 있다면 쿠키를 지워보세요.<p>저장된 샘플은 언제든지 사라질 수 있으므로 따로 저장해두시기 바랍니다.</p>
-            </div>
-            </div>
+				</div>
+			</div>
         </div>
+    </div>
         <div class="panel poke-info" id="p2">
             <div class="panel-heading"><h4 class="panel-title">포켓몬 2</h4></div>
             <div class="panel-body">
@@ -382,7 +384,9 @@
             </div>
         </div>
         <div class="footer">
-            <p><em>이 계산기는 Honko, gamut, Zarel의 작업에 기초하여 만들어졌으며, 포켓몬 챔피언쉽 시리즈의 플레이어인 Tapin, Firestorm, squirrelboy1225가 최적화하였습니다.</em></p></div>
+            <p><em>이 계산기는 Honko, gamut, Zarel의 작업에 기초하여 만들어졌으며, 포켓몬 챔피언쉽 시리즈의 플레이어인 Tapin, Firestorm, squirrelboy1225가 최적화하였습니다.</em></p>
+			<p>예시 샘플: <a href="https://github.com/jake-white">JakeWhite</a> / <a href="http://blog.naver.com/jhshin329">정훈</a> / <a href="http://blog.naver.com/3456789asdf">로카</a> / <a href="http://blog.naver.com/g2yigyu">규벨</a>
+		</div>
     </div>
 
 
@@ -413,6 +417,7 @@
     <script type="text/javascript" src="script_res/damage_rby.js"></script>
     <script type="text/javascript" src="script_res/ko_chance.js"></script>
     <script type="text/javascript" src="script_res/custom_help.js"></script>
+    <script type="text/javascript" src="script_res/custom_toggle.js"></script>
 
 </body>
 </html>
