@@ -182,7 +182,7 @@ function getDamageResult(attacker, defender, move, field) {
             break;
         case "안다리걸기":
         case "풀묶기":
-            var w = defender.weight;
+            var w = defender.weight / ((defender.ability === "라이트메탈")+1) * ((defender.ability === "헤비메탈")+1);
             basePower = w >= 200 ? 120 : w >= 100 ? 100 : w >= 50 ? 80 : w >= 25 ? 60 : w >= 10 ? 40 : 20;
             description.moveBP = basePower;
             break;
