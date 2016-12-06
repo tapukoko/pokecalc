@@ -3285,6 +3285,11 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		type: '풀',
 		bp: 0
 	},
+	'자연의분노': {
+		category: '특수',
+		type: '페어리',
+		bp: "?"
+	},
     '울트라대시어택': {
         type: '노말'
     },
