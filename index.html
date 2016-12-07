@@ -9,6 +9,7 @@
     <link type="text/css" rel="stylesheet" href="script_res/select2.css" />
     <link type="text/css" rel="stylesheet" href="script_res/ap_calc.css" />
     <link type="text/css" rel="stylesheet" href="script_res/nb_calc.css" />
+    <link type="text/css" rel="stylesheet" href="script_res/modal.css" />
 </head>
 <body>
     <div class="header"><div class="wrapper">
@@ -387,6 +388,42 @@
             <p><em>이 계산기는 Honko, gamut, Zarel의 작업에 기초하여 만들어졌으며, 포켓몬 챔피언쉽 시리즈의 플레이어인 Tapin, Firestorm, squirrelboy1225가 최적화하였습니다.</em></p>
 			<p>예시 샘플: <a href="https://github.com/jake-white" target="_blank">JakeWhite</a> / <a href="http://blog.naver.com/jhshin329" target="_blank">정훈</a> / <a href="http://blog.naver.com/3456789asdf" target="_blank">로카</a> / <a href="http://blog.naver.com/g2yigyu" target="_blank">규벨</a> / <a href="http://blog.naver.com/1209sung" target="_blank">눈파티</a>
 			<p><a href="http://pokecalc.url.ph" target="_blank">포켓몬 다용도 계산기 무누우 계산기</a></p>
+			<p><button id="myBtn">문제가 있나요?</button></p>
+			
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">×</span>
+					<div style="font-size:28pt">FAQ</div>
+				</div>
+				<div class="modal-body" style="font-family:나눔고딕, 맑은고딕, Arial">
+					<p><br>
+					<div style="font-size:16pt" id='faq1'>원하는 포켓몬, 기술, 아이템, 특성을 찾을 수 없습니다</div> <br>
+					<div style="font-size:12pt; color:#4d4d4d; display:none;" id='faq1Content'>이름을 잘못 알고 있던건 아닌지 확인해보세요.</div><br></p> 
+					<hr>
+					<p><br>
+					<div style="font-size:16pt" id='faq2'>아이템, 특성, 필드 등의 효과가 대미지에 반영되지 않습니다</div> <br>
+					<div style="font-size:12pt; color:#4d4d4d; display:none;" id='faq2Content'>아래의 주소로 이메일을 보내주세요.</div><br></p> 
+					<hr>
+					<p><br>
+					<div style="font-size:16pt" id='faq3'>기술 위력이 이상한게 나옵니다</div> <br>
+					<div style="font-size:12pt; color:#4d4d4d; display:none;" id='faq3Content'>변화기, 몸무게에 따라 위력이 변하는 기술 등은 그렇습니다.</div><br></p>
+					<hr>
+					<p><br>
+					<div style="font-size:16pt" id='faq4'>제 샘플이 이 사이트에 나오는 것을 원하지 않습니다</div> <br>
+					<div style="font-size:12pt; color:#4d4d4d; display:none;" id='faq4Content'>죄송합니다, 아래의 주소로 이메일을 보내주세요.</div><br></p>
+					<p>
+					
+				</div>
+				<div class="modal-footer" style="font-family:나눔고딕, 맑은고딕, Arial">
+					<div style="font-size:18pt; height:36px;">해결하지 못하셨다면: jupithanda@gmail.com</div>
+				</div>
+			  </div>
+
+			</div>
 	</div>
     </div>
 
@@ -418,7 +455,8 @@
     <script type="text/javascript" src="script_res/damage_rby.js"></script>
     <script type="text/javascript" src="script_res/ko_chance.js"></script>
     <script type="text/javascript" src="script_res/custom_help.js"></script>
-    <script type="text/javascript" src="script_res/custom_toggle.js"></script>
+    <script type="text/javascript" src="script_res/modal.js"></script>
+    <script type="text/javascript" src="script_res/faq_toggle.js"></script>
 
 </body>
 </html>
