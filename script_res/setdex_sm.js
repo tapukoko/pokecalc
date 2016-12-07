@@ -9381,7 +9381,7 @@ var SETDEX_SM={
       },
       "nature": "조심",
       "ability": "사이코메이커",
-      "item": "먹다남은음식",
+      "item": "에스퍼Z",
       "moves": [
         "사이코키네시스",
         "문포스",
