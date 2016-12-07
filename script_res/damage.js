@@ -197,6 +197,7 @@ function getDamageResult(attacker, defender, move, field) {
         case "흡수":
         case "흡혈":
 			basePower = move.bp * (defender.item === "큰뿌리" ? 1.3 : 1);
+            description.moveBP = basePower;
 			break;
 		case "병상첨병":
             basePower = move.bp * (defender.status !== "정상" ? 2 : 1);
