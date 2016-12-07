@@ -359,7 +359,7 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
         type: '격투',
         category: '특수'
     },
-    '잠재파워-불': {
+    '잠재파워-불꽃': {
         bp: 70,
         type: '불꽃',
         category: '특수'
