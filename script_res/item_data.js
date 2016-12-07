@@ -232,6 +232,31 @@ var ITEMS_XY = ITEMS_BW.concat([
 	'약점보험'
 ]);
 
+ITEMS_XY.splice(ITEMS_XY.indexOf('검은안경'), 1, '검은안경');
+ITEMS_XY.splice(ITEMS_XY.indexOf('심해의비늘'), 1, '심해의비늘');
+ITEMS_XY.splice(ITEMS_XY.indexOf('심해의이빨'), 1, '심해의이빨');
+ITEMS_XY.splice(ITEMS_XY.indexOf('녹지않는얼음'), 1, '녹지않는얼음');
+ITEMS_XY.splice(ITEMS_XY.indexOf('은빛가루'), 1, '은빛가루');
+ITEMS_XY.splice(ITEMS_XY.indexOf('휘어진스푼'), 1, '휘어진스푼');
+ITEMS_XY.splice(ITEMS_XY.indexOf('벌레주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('악주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('드래곤주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('전기주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('격투주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('불꽃주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('비행주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('고스트주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('풀주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('땅주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('얼음주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('독주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('에스퍼주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('바위주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('강철주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('물주얼'), 1);
+ITEMS_XY.splice(ITEMS_XY.indexOf('마음의물방울'), 1);
+
+
 var ITEMS_SM = ITEMS_XY.concat([
     '벌레Z',
 	'악Z',
@@ -262,35 +287,6 @@ var ITEMS_SM = ITEMS_XY.concat([
 	'누리레느Z',
 	'카푸Z',
 	'마샤도Z'
-]);
-
-ITEMS_XY.splice(ITEMS_XY.indexOf('검은안경'), 1, '검은안경');
-ITEMS_XY.splice(ITEMS_XY.indexOf('심해의비늘'), 1, '심해의비늘');
-ITEMS_XY.splice(ITEMS_XY.indexOf('심해의이빨'), 1, '심해의이빨');
-ITEMS_XY.splice(ITEMS_XY.indexOf('녹지않는얼음'), 1, '녹지않는얼음');
-ITEMS_XY.splice(ITEMS_XY.indexOf('은빛가루'), 1, '은빛가루');
-ITEMS_XY.splice(ITEMS_XY.indexOf('휘어진스푼'), 1, '휘어진스푼');
-ITEMS_XY.splice(ITEMS_XY.indexOf('벌레주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('악주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('드래곤주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('전기주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('격투주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('불꽃주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('비행주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('고스트주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('풀주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('땅주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('얼음주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('독주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('에스퍼주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('바위주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('강철주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('물주얼'), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf('마음의물방울'), 1);
-
-
-var ITEMS_SM = ITEMS_XY.concat([
-    
 ]);
 
 function getItemBoostType(item) {
