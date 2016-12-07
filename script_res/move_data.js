@@ -751,6 +751,11 @@ var MOVES_ADV = $.extend(true, {}, MOVES_GSC, {
         type: '노말',
         category: '특수',
         isBullet: true
+    },
+    '머드숏': {
+        bp: 55,
+        type: '땅',
+        category: '특수'
     }
 });
 
