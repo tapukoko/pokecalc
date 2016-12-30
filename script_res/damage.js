@@ -182,24 +182,11 @@ function getDamageResult(attacker, defender, move, field) {
             break;
         case "안다리걸기":
         case "풀묶기":
-            var w = defender.weight / ((defender.ability === "라이트메탈")+1) * ((defender.ability === "헤비메탈")+1) / ((defender.item === "가벼운돌")+1);
+            var w = defender.weight;
             basePower = w >= 200 ? 120 : w >= 100 ? 100 : w >= 50 ? 80 : w >= 25 ? 60 : w >= 10 ? 40 : 20;
             description.moveBP = basePower;
             break;
-        case "꿈먹기":
-        case "기가드레인":
-        case "데스윙":
-        case "드레인키스":
-        case "드레인펀치":
-        case "메가드레인":
-        case "우드호른":
-        case "파라볼라차지":
-        case "흡수":
-        case "흡혈":
-			basePower = move.bp * (attacker.item === "큰뿌리" ? 1.3 : 1);
-            description.moveBP = basePower;
-			break;
-		case "병상첨병":
+        case "병상첨병":
             basePower = move.bp * (defender.status !== "정상" ? 2 : 1);
             description.moveBP = basePower;
             break;
@@ -361,7 +348,7 @@ function getDamageResult(attacker, defender, move, field) {
     }
     
     if(move.type === "강철" && attacker.ability === "강철술사"){
-        bpMods.push(0x1800);
+        bpMods.push(0x1547);
     }
     
     basePower = Math.max(1, pokeRound(basePower * chainMods(bpMods) / 0x1000));
@@ -566,7 +553,7 @@ function getDamageResult(attacker, defender, move, field) {
         finalMods.push(0x1800);
         description.attackerAbility = attacker.ability;
     }
-    if ((defAbility === "하드록" || defAbility === "필터" || defAbility === "프리즘아머") && typeEffectiveness > 1) {
+    if ((defAbility === "하드록" || defAbility === "필터") && typeEffectiveness > 1) {
         finalMods.push(0xC00);
         description.defenderAbility = defAbility;
     }
