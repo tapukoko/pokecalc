@@ -543,7 +543,7 @@ var MOVES_ADV = $.extend(true, {}, MOVES_GSC, {
         makesContact: true,
         hasSecondaryEffect: true
     },
-    '뻐다귀부메랑': {
+    '뼈다귀부메랑': {
         bp: 50,
         type: '땅',
         category: '물리',
@@ -3464,7 +3464,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
     '대폭발':{
         zp: 200
     },
-    '뻐다귀부메랑':{
+    '뼈다귀부메랑':{
         zp: 100
     },
     '스톤샤워':{
