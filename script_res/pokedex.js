@@ -1,4 +1,4 @@
-﻿var POKEDEX_RBY = {
+var POKEDEX_RBY = {
   "캐이시": {
     "t1": "에스퍼",
     "bs": {
@@ -647,7 +647,7 @@
     },
     "w": 300.0
   },
-  "데구리": {
+  "딱구리": {
     "t1": "바위",
     "t2": "땅",
     "bs": {
@@ -700,7 +700,7 @@
       "sl": 100
     },
     "w": 235.0,
-    "ab": "위협"
+    "ab": "괴력집게"
   },
   "고우스트": {
     "t1": "고스트",
@@ -1830,7 +1830,7 @@
       "sl": 70
     },
     "w": 88.4,
-    "ab": "위협"
+    "ab": "괴력집게"
   },
   "왕눈해": {
     "t1": "물",
@@ -2428,7 +2428,7 @@ var POKEDEX_GSC = $.extend(true, {}, POKEDEX_RBY, {
       "sp": 45
     },
     "w": 48.7,
-    "ab": "위협"
+    "ab": "괴력집게"
   },
   "헤라크로스": {
     "t1": "벌레",
@@ -2454,7 +2454,7 @@ var POKEDEX_GSC = $.extend(true, {}, POKEDEX_RBY, {
       "sp": 70
     },
     "w": 48.0,
-    "ab": "위협"
+    "ab": "괴력집게"
   },
   "칠색조": {
     "t1": "불꽃",
@@ -3095,7 +3095,7 @@ var POKEDEX_GSC = $.extend(true, {}, POKEDEX_RBY, {
       "sp": 85
     },
     "w": 71.2,
-    "ab": "위협"
+    "ab": "괴력집게"
   },
   "강철톤": {
     "t1": "강철",
@@ -4247,7 +4247,7 @@ var POKEDEX_ADV = $.extend(true, {}, POKEDEX_GSC, {
       "sp": 60
     },
     "w": 3.6,
-    "ab": "위협"
+    "ab": "괴력집게"
   },
   "입치트": {
     "t1": "강철",
@@ -4328,7 +4328,7 @@ var POKEDEX_ADV = $.extend(true, {}, POKEDEX_GSC, {
       "sp": 70
     },
     "w": 37.0,
-    "ab": "위협"
+    "ab": "괴력집게"
   },
   "밀로틱": {
     "t1": "물",
@@ -4585,7 +4585,7 @@ var POKEDEX_ADV = $.extend(true, {}, POKEDEX_GSC, {
       "sp": 100
     },
     "w": 102.6,
-    "ab": "위협"
+    "ab": "괴력집게"
   },
   "나무킹": {
     "t1": "풀",
@@ -6654,7 +6654,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 100
     },
     "w": 24.9,
-    "ab": "위협"
+    "ab": "괴력집게"
   },
   "찌르버드": {
     "t1": "노말",
@@ -6668,7 +6668,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 80
     },
     "w": 15.5,
-    "ab": "위협"
+    "ab": "괴력집게"
   },
   "찌르꼬": {
     "t1": "노말",
@@ -7888,7 +7888,7 @@ var POKEDEX_BW = $.extend(true, {}, POKEDEX_DPP, {
       "sp": 91
     },
     "w": 68.0,
-    "ab": "위협"
+    "ab": "괴력집게"
   },
   "활화르바": {
     "t1": "벌레",
@@ -10197,7 +10197,7 @@ var POKEDEX_XY = $.extend(true, {}, POKEDEX_BW, {
       "sp": 135
     },
     "w": 44.0,
-    "ab": "위협",
+    "ab": "괴력집게",
     "isAlternateForme": true
   },
   "메가입치트": {
@@ -10897,7 +10897,25 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 
 
 
-  //new forms
+  //alolan forms
+  "꼬렛": { "formes": ["꼬렛", "알로라 꼬렛"] },
+  "레트라": { "formes": ["레트라", "알로라 레트라"] },
+  "나옹": { "formes": ["나옹", "알로라 나옹"] },
+  "페르시온": { "formes": ["페르시온", "알로라 페르시온"] },
+  "라이츄": { "formes": ["라이츄", "알로라 라이츄"] },
+  "텅구리": { "formes": ["텅구리", "알로라 텅구리"] },
+  "꼬마돌": { "formes": ["꼬마돌", "알로라 꼬마돌"] },
+  "딱구리": { "formes": ["딱구리", "알로라 딱구리"] },
+  "딱구리": { "formes": ["딱구리", "알로라 딱구리"] },
+  "나시": { "bs": { "sd": 75 }, "formes": ["나시", "알로라 나시"] },
+  "디그다": { "formes": ["디그다", "알로라 디그다"] },
+  "닥트리오": { "bs": { "at": 100 }, "formes": ["닥트리오", "알로라 닥트리오"] },
+  "식스테일": { "formes": ["식스테일", "알로라 식스테일"] },
+  "나인테일": { "formes": ["나인테일", "알로라 나인테일"] },
+  "모래두지": { "formes": ["모래두지", "알로라 모래두지"] },
+  "고지": { "formes": ["고지", "알로라 고지"] },
+  "질퍽이": { "formes": ["질퍽이", "알로라 질퍽이"] },
+  "질뻐기": { "formes": ["질뻐기", "알로라 질뻐기"] }, 
   "개굴닌자": { "formes": ["개굴닌자", "지우개굴닌자"] },
 
   //abilities
@@ -10915,7 +10933,6 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
   "프리지오": { "bs": { "hp": 80, "df": 50 } },
 
   //attack buffs
-  "닥트리오": { "bs": { "at": 100 }},
   "아보크": { "bs": { "at": 95 } },
   "파오리": { "bs": { "at": 90 } },
   "암팰리스": { "bs": { "at": 105 } },
@@ -10931,7 +10948,6 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
   "스왈로": { "bs": { "sa": 75 } },
 
   //special defense buffs
-  "나시": { "bs": { "sd": 75 }},
   "아리아도스": { "bs": { "sd": 70 } },
 
   //speed buffs
@@ -10959,7 +10975,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
     "ab": "유대변화",
     "isAlternateForme": true
   },
-  "꼬렛-알로라": {
+  "알로라 꼬렛": {
     "t1": "악",
     "t2": "노말",
     "bs": {
@@ -10971,8 +10987,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 72
     },
     "w": 3.8,
+    "isAlternateForme": true
   },
-  "레트라-알로라": {
+  "알로라 레트라": {
     "t1": "악",
     "t2": "노말",
     "bs": {
@@ -10984,8 +11001,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 77
     },
     "w": 25.5,
+    "isAlternateForme": true
   },
-  "나옹-알로라": {
+  "알로라 나옹": {
     "t1": "악",
     "bs": {
       "hp": 40,
@@ -10996,8 +11014,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 90
     },
     "w": 4.2,
+    "isAlternateForme": true
   },
-  "페르시온-알로라": {
+  "알로라 페르시온": {
     "t1": "악",
     "bs": {
       "hp": 65,
@@ -11008,8 +11027,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 115
     },
     "w": 33.0,
+    "isAlternateForme": true
   },
-  "라이츄-알로라": {
+  "알로라 라이츄": {
     "t1": "전기",
     "t2": "에스퍼",
     "bs": {
@@ -11021,8 +11041,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 110
     },
     "w": 21.0,
+    "isAlternateForme": true
   },
-  "텅구리-알로라": {
+  "알로라 텅구리": {
     "t1": "불꽃",
     "t2": "고스트",
     "bs": {
@@ -11034,8 +11055,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 45
     },
     "w": 34.0,
+    "isAlternateForme": true
   },
-  "꼬마돌-알로라": {
+  "알로라 꼬마돌": {
     "t1": "바위",
     "t2": "전기",
     "bs": {
@@ -11047,8 +11069,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 20
     },
     "w": 20.3,
+    "isAlternateForme": true
   },
-  "데구리-알로라": {
+  "알로라 딱구리": {
     "t1": "바위",
     "t2": "전기",
     "bs": {
@@ -11060,8 +11083,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 35
     },
     "w": 110.0,
+    "isAlternateForme": true
   },
-  "딱구리-알로라": {
+  "알로라 딱구리": {
     "t1": "바위",
     "t2": "전기",
     "bs": {
@@ -11074,8 +11098,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
     },
     "ab": "일렉트릭스킨",
     "w": 316.0,
+    "isAlternateForme": true
   },
-  "나시-알로라": {
+  "알로라 나시": {
     "t1": "풀",
     "t2": "드래곤",
     "bs": {
@@ -11087,8 +11112,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 45
     },
     "w": 415.6,
+    "isAlternateForme": true
   },
-  "디그다-알로라": {
+  "알로라 디그다": {
     "t1": "땅",
     "t2": "강철",
     "bs": {
@@ -11100,8 +11126,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 90
     },
     "w": 1.0,
+    "isAlternateForme": true
   },
-  "닥트리오-알로라": {
+  "알로라 닥트리오": {
     "t1": "땅",
     "t2": "강철",
     "bs": {
@@ -11113,8 +11140,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 110
     },
     "w": 66.6,
+    "isAlternateForme": true
   },
-  "식스테일-알로라": {
+  "알로라 식스테일": {
     "t1": "얼음",
     "bs": {
       "hp": 38,
@@ -11125,8 +11153,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 65
     },
     "w": 9.9,
+    "isAlternateForme": true
   },
-  "나인테일-알로라": {
+  "알로라 나인테일": {
     "t1": "얼음",
     "t2": "페어리",
     "bs": {
@@ -11139,8 +11168,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
     },
     "w": 19.9,
     "ab": "눈퍼뜨리기",
+    "isAlternateForme": true
   },
-  "모래두지-알로라": {
+  "알로라 모래두지": {
     "t1": "얼음",
     "t2": "강철",
     "bs": {
@@ -11152,8 +11182,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 40
     },
     "w": 40.0,
+    "isAlternateForme": true
   },
-  "고지-알로라": {
+  "알로라 고지": {
     "t1": "얼음",
     "t2": "강철",
     "bs": {
@@ -11165,8 +11196,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 65
     },
     "w": 55.0,
+    "isAlternateForme": true
   },
-  "질퍽이-알로라": {
+  "알로라 질퍽이": {
     "t1": "독",
     "t2": "악",
     "bs": {
@@ -11178,8 +11210,9 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 25
     },
     "w": 42.0,
+    "isAlternateForme": true
   },
-  "질뻐기-알로라": {
+  "알로라 질뻐기": {
     "t1": "독",
     "t2": "악",
     "bs": {
@@ -11191,6 +11224,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sp": 50
     },
     "w": 52.0,
+    "isAlternateForme": true
   },
   "나몰빼미": {
     "t1": "풀",
@@ -11998,7 +12032,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
     "t2": "강철",
     "bs": {
       "hp": 65,
-      "at": 98,
+      "at": 95,
       "df": 63,
       "sa": 40,
       "sd": 73,
